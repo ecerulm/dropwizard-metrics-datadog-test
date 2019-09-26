@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.rubenlaguna'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+// datadog metrics
+    implementation group: 'io.dropwizard.metrics', name: 'metrics-core', version: '4.1.0'
+    implementation group: 'org.coursera', name: 'metrics-datadog', version: '1.1.14'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
+
+    runtimeOnly group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
+
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+
+}
